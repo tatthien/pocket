@@ -1,29 +1,7 @@
 # finance
 
-## Project setup
-```
-npm install
-```
+## Why?
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Nowaday, there are a lot of expense manager apps out there. Making another like-apps seems that you can't compete them. The reason I create this project is just learning Node.js in my spare time.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+wip...
