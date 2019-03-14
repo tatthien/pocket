@@ -2,6 +2,6 @@
 
 ## Why?
 
-Nowaday, there are a lot of expense manager apps out there. Making another like-apps seems that you can't compete them. The reason I create this project is just learning Node.js in my spare time.
+I don't intend to make this project to compete with many expense manager apps out there. The reason that I create this project are learning Node.js, giving Tailwind CSS a try and having my own expense manager app to use daily.
 
 wip...
