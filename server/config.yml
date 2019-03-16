@@ -4,3 +4,6 @@ database:
   username: root
   password: ''
   host: 127.0.0.1
+jwt:
+  secret: POCKET_JWT_SECRET
+  expires: 60
