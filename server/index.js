@@ -1,24 +1,22 @@
 const express = require('express')
 const mysql = require('mysql')
 const bodyParser = require('body-parser')
-const yaml = require('js-yaml')
 const fs = require('fs')
 const path = require('path')
 const transactions = require('./routes/transactions')
 const reports = require('./routes/reports')
 const auth = require('./routes/auth')
 
+require('dotenv').config()
+
 const app = express()
 app.use(bodyParser.json())
 
-// Read config
-let config = yaml.safeLoad(fs.readFileSync(path.resolve(__dirname, 'config.yml')), 'utf8')
-
 const db = mysql.createConnection({
-  host: config.database.host,
-  user: config.database.username,
-  password: config.database.password,
-  database: config.database.name
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 })
 
 db.connect((err) => {
@@ -34,4 +32,4 @@ app.use('/api/transactions', transactions)
 app.use('/api/reports', reports)
 app.use('/api/auth', auth)
 
-app.listen(config.port || 3000, () => console.log(`Server is running on port ${config.port}`))
+app.listen(process.env.POST || 3000, () => console.log(`Server is running on port ${process.env.PORT}`))

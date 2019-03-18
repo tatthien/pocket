@@ -27,8 +27,8 @@ router.post('/', (req, res) => {
       let user = result[0]
 
       // Create token
-      let token = jwt.sign({ id: user.id }, config.jwt.secret, {
-        expiresIn: config.jwt.expires
+      let token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
+        expiresIn: process.env.JWT_EXPIRES
       })
 
       user.token = token
@@ -51,7 +51,7 @@ router.post('/verify', (req, res) => {
     })
   }
   
-  jwt.verify(token, config.jwt.secret, (err, encoded) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err, encoded) => {
     if (err) {
       return res.status(401).json({
         'msg': 'Failed to authenticate token'

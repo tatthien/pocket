@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "server:start": "nodemon sever",
+    "server:start": "none sever",
     "server:setup": "node server/setup"
   },
   "dependencies": {
@@ -15,8 +15,8 @@
     "body-parser": "^1.18.3",
     "chart.js": "^2.7.3",
     "date-fns": "^1.30.1",
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
-    "js-yaml": "^3.12.2",
     "jsonwebtoken": "^8.5.0",
     "ladda": "^2.0.1",
     "mysql": "^2.16.0",
