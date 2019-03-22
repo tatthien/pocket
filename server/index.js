@@ -1,8 +1,6 @@
 const express = require('express')
 const mysql = require('mysql')
 const bodyParser = require('body-parser')
-const fs = require('fs')
-const path = require('path')
 const transactions = require('./routes/transactions')
 const reports = require('./routes/reports')
 const auth = require('./routes/auth')
@@ -21,7 +19,7 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.log('Cannot connect to database')
+    throw err
   }
 
   console.log('Connected to database')
