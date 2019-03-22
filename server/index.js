@@ -32,4 +32,5 @@ app.use('/api/transactions', transactions)
 app.use('/api/reports', reports)
 app.use('/api/auth', auth)
 
-app.listen(process.env.POST || 3000, () => console.log(`Server is running on port ${process.env.PORT}`))
+const port = process.env.POST || 3000
+app.listen(port, () => console.log(`Server is running on port ${port}`))
