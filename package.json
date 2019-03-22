@@ -9,6 +9,7 @@
     "server:start": "none sever",
     "server:setup": "node server/setup"
   },
+  "start": "node server/index.js",
   "dependencies": {
     "axios": "^0.18.0",
     "bcrypt": "^3.0.4",
